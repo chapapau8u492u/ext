@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/popup.css">
+  <title>QuestionSolver AI</title>
+</head>
+<body>
+  <div class="popup-container">
+    <header>
+      <h1>QuestionSolver AI</h1>
+    </header>
+    
+    <main>
+      <div class="action-buttons">
+        <button id="scan-page" class="primary-button">
+          <span class="icon-search"></span>
+          Scan for Questions
+        </button>
+        <button id="toggle-panel" class="secondary-button">
+          <span class="icon-panel"></span>
+          Toggle Answer Panel
+        </button>
+      </div>
+      
+      <div class="settings-summary">
+        <div class="setting-group">
+          <h3>Current Settings</h3>
+          <div class="setting">
+            <label>API Provider:</label>
+            <span id="current-api"></span>
+          </div>
+          <div class="setting">
+            <label>Mode:</label>
+            <span id="current-mode"></span>
+          </div>
+          <div class="setting">
+            <label>Theme:</label>
+            <span id="current-theme"></span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="question-stats">
+        <span id="question-count">0 questions detected</span>
+      </div>
+    </main>
+    
+    <footer>
+      <button id="open-options" class="text-button">
+        <span class="icon-settings"></span>
+        Options
+      </button>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

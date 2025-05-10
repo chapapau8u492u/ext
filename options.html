@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/options.css">
+  <title>QuestionSolver AI Options</title>
+</head>
+<body>
+  <div class="options-container">
+    <header>
+      <h1>QuestionSolver AI</h1>
+      <p>Configure your preferences</p>
+    </header>
+    
+    <main>
+      <section class="option-section">
+        <h2>API Settings</h2>
+        <div class="option-group">
+          <label for="api-provider">Default API Provider:</label>
+          <select id="api-provider" name="api-provider">
+            <option value="huggingface">Hugging Face</option>
+            <option value="cohere">Cohere</option>
+            <option value="groq">Groq</option>
+            <option value="openrouter">OpenRouter</option>
+          </select>
+          <p class="description">Select your preferred AI service for generating answers.</p>
+        </div>
+        
+        <div class="option-group">
+          <label for="default-mode">Default Mode:</label>
+          <select id="default-mode" name="default-mode">
+            <option value="speed">Speed Mode</option>
+            <option value="accuracy">Accuracy Mode</option>
+          </select>
+          <p class="description">Speed mode uses faster, lighter models. Accuracy mode uses more powerful models for better results.</p>
+        </div>
+      </section>
+      
+      <section class="option-section">
+        <h2>Appearance</h2>
+        <div class="option-group">
+          <label for="theme">Theme:</label>
+          <select id="theme" name="theme">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+          </select>
+        </div>
+        
+        <div class="option-group">
+          <label for="opacity-slider">Panel Opacity: <span id="opacity-value">95%</span></label>
+          <input type="range" id="opacity-slider" name="opacity" min="0.5" max="1" step="0.05" value="0.95">
+          <div class="slider-marks">
+            <span>50%</span>
+            <span>75%</span>
+            <span>100%</span>
+          </div>
+        </div>
+      </section>
+      
+      <section class="option-section">
+        <h2>Advanced</h2>
+        <div class="option-group checkbox-group">
+          <input type="checkbox" id="auto-scan" name="auto-scan">
+          <label for="auto-scan">Auto-scan pages for questions</label>
+          <p class="description">Automatically scan pages when they load (may impact performance).</p>
+        </div>
+        
+        <div class="option-group checkbox-group">
+          <input type="checkbox" id="include-context" name="include-context">
+          <label for="include-context">Include page context with questions</label>
+          <p class="description">Send surrounding text to improve answer quality (uses more tokens).</p>
+        </div>
+        
+        <div class="button-group">
+          <button id="reset-settings" class="secondary-button">Reset to Defaults</button>
+        </div>
+      </section>
+    </main>
+    
+    <footer>
+      <div id="status-message"></div>
+      <button id="save-settings" class="primary-button">Save Settings</button>
+    </footer>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>
